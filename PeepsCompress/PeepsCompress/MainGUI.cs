@@ -101,7 +101,7 @@ namespace PeepsCompress
                                     MessageBox.Show("File successfully compressed.");
                                 }
                             }
-                            catch(Exception ex)
+                            catch (Exception ex)
                             {
                                 MessageBox.Show(ex.Message);
                             }
@@ -140,6 +140,8 @@ namespace PeepsCompress
             else
             {
                 MessageBox.Show("Error: Bad File Path");
+
+                throw new FileNotFoundException();
             }
         }
 
@@ -154,6 +156,10 @@ namespace PeepsCompress
         {
             inputMethodComboBox.SelectedIndex = 0;
             compressionAlgorithmComboBox.SelectedIndex = 0;
+
+            filePathTextBox.ReadOnly = true;
+
+            filePathTextBox.Text = ("Error: No such file found.");
         }
 
         //Compression Mode Changed
