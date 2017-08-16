@@ -156,10 +156,6 @@ namespace PeepsCompress
         {
             inputMethodComboBox.SelectedIndex = 0;
             compressionAlgorithmComboBox.SelectedIndex = 0;
-
-            filePathTextBox.ReadOnly = true;
-
-            filePathTextBox.Text = ("Error: No such file found.");
         }
 
         //Compression Mode Changed
@@ -174,6 +170,12 @@ namespace PeepsCompress
                 inputMethodComboBox.Enabled = false;
                 inputMethodComboBox.SelectedIndex = 0;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            checkUpdate Form = new checkUpdate();
+            Form.Show();
         }
     }
 }

@@ -52,6 +52,12 @@
     <Compile Include="BigEndianBinaryReader.cs" />
     <Compile Include="BigEndianBinaryWriter.cs" />
     <Compile Include="Abstract Classes\Compression.cs" />
+    <Compile Include="checkUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="checkUpdate.Designer.cs">
+      <DependentUpon>checkUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,9 @@
     <Compile Include="Abstract Classes\SlidingWindowAlgorithm.cs" />
     <Compile Include="Algorithm Classes\YAY0.cs" />
     <Compile Include="Algorithm Classes\YAZ0.cs" />
+    <EmbeddedResource Include="checkUpdate.resx">
+      <DependentUpon>checkUpdate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainGUI.resx">
       <DependentUpon>MainGUI.cs</DependentUpon>
     </EmbeddedResource>
